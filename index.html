@@ -34,13 +34,23 @@
         .project-container {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            transition: all 0.3s ease;
         }
         .project-container img, .project-container iframe {
             margin-right: 20px;
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+            object-fit: cover;
         }
         .project-description {
             max-width: 400px;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
         }
         footer {
             text-align: center;
@@ -49,6 +59,20 @@
             margin-top: 20px;
         }
 
+        @media (max-width: 1024px) {
+            .project-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-container img, .project-container iframe {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .project-description {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -206,3 +230,4 @@
     </footer>
 </body>
 </html>
+
